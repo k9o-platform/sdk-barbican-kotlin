@@ -1,0 +1,13 @@
+# Android build outputs
+build/
+.gradle/
+local.properties
+
+# uniffi-generated Kotlin binding (CI-produced from k9o-keep-core-ffi-uniffi). Never committed: the kibo pattern.
+src/main/kotlin/uniffi/
+
+# compiled engine, per-ABI (CI-built; one libk9o_keep_core_ffi_uniffi.so per ABI). NEVER commit a build made with
+# --features test-trust-root: it embeds the published TEST root public key.
+src/main/jniLibs/*/
+# host (JVM) engine for local test runs
+jvm-work/
